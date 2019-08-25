@@ -4,7 +4,11 @@
   "description": "",
   "main": "app.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "nodemon ./bin/www",
+    "watch": "nodemon ./bin/www",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "migrate:make": "knex migrate:make --knexfile ./knexfile.js",
+    "migrate:run": "knex migrate:latest --knexfile ./knexfile.js"
   },
   "repository": {
     "type": "git",
